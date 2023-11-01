@@ -1,0 +1,22 @@
+[package]
+authors = {{authors}}
+readme = "README.md"
+name = {{project-name}}
+version = "0.1.0"
+edition = "2021"
+
+# for cargo flash
+[package.metadata]
+chip = "ATSAMD21E18"
+
+[profile.release]
+lto = true
+opt-level = 3
+
+[[example]]
+name = "blinky_basic"
+
+[dependencies]
+panic-halt = "0.2.0"
+trinket_m0 = "0.11.0"
+
